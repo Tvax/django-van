@@ -1,0 +1,13 @@
+{% extends 'news/base.html' %}
+
+{% block content %}
+    {% for application in applications %}
+        <div class="application">
+            <div class="date">
+                {{ application.published_date }}
+            </div>
+            <h1><a href="">{{ application.title }} - {{ application.version }}</a></h1>
+            <p><a href="{{ application.file.url  }}">Download</a></p>
+        </div>
+    {% endfor %}
+{% endblock %}
